@@ -15,6 +15,7 @@
         left: $width - $height + $handle-margin;
     }
 }
+
 @mixin switch($type, $width, $height, $font-size, $handle-margin) {
     position: relative;
     display: inline-block;
@@ -123,8 +124,7 @@
         &.switch-xs {
             @include switch-size($switch-xs-width, $switch-xs-height, $switch-xs-font-size, $handle-margin);
         }
-    } @else
-    if $type == text {
+    } @else if $type == text {
         &.switch-lg {
             @include switch-size($switch-text-lg-width, $switch-text-lg-height, $switch-text-lg-font-size, $handle-margin);
         }
@@ -136,8 +136,7 @@
         &.switch-xs {
             @include switch-size($switch-text-xs-width, $switch-text-xs-height, $switch-text-xs-font-size, $handle-margin);
         }
-    } @else
-    if $type == icon {
+    } @else if $type == icon {
         &.switch-lg {
             @include switch-size($switch-icon-lg-width, $switch-icon-lg-height, $switch-icon-lg-font-size, $handle-margin);
         }
@@ -149,8 +148,7 @@
         &.switch-xs {
             @include switch-size($switch-icon-xs-width, $switch-icon-xs-height, $switch-icon-xs-font-size, $handle-margin);
         }
-    } @else
-    if $type == ddd {
+    } @else if $type == ddd {
         &.switch-lg {
             @include switch-size($switch-lg-width, $switch-lg-height, $switch-lg-font-size, 0);
         }
@@ -164,16 +162,18 @@
         }
     }
 }
+
 @mixin switch-variant($color) {
     > .switch-input:checked ~ .switch-label {
         background: $color !important;
-        border-color: darken($color,10%);
+        border-color: darken($color, 10%);
     }
 
     > .switch-input:checked ~ .switch-handle {
-        border-color: darken($color,10%);
+        border-color: darken($color, 10%);
     }
 }
+
 @mixin switch-outline-variant($color) {
     > .switch-input:checked ~ .switch-label {
         background: #fff !important;
@@ -188,6 +188,7 @@
         border-color: $color;
     }
 }
+
 @mixin switch-outline-alt-variant($color) {
     > .switch-input:checked ~ .switch-label {
         background: #fff !important;
@@ -203,6 +204,7 @@
         border-color: $color;
     }
 }
+
 $switch-lg-width: 48px;
 $switch-lg-height: 28px;
 $switch-lg-font-size: 12px;
@@ -256,6 +258,7 @@ $switch-icon-xs-font-size: 7px;
 .switch.switch-3d {
     @include switch('ddd', $switch-width, $switch-height, $switch-font-size, 0);
 }
+
 //pills style
 .switch-pill {
     .switch-handle,
@@ -271,6 +274,7 @@ $switch-icon-xs-font-size: 7px;
         left: 2px !important;
     }
 }
+
 @each $color, $value in $theme-colors {
     //normal style
     .switch-#{$color} {

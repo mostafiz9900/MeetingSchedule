@@ -25,7 +25,10 @@
         "lykmapipo <lallyelias87@gmail.com>",
         "themify.me <http://themify.me/themify-icons>"
     ],
-    "license": ["MIT", "OFL"],
+    "license": [
+        "MIT",
+        "OFL"
+    ],
     "ignore": [
         "**/.*",
         "node_modules",

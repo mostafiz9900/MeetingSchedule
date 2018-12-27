@@ -1,7 +1,6 @@
 package com.beskilled.onlinebanking.entity;
 
 
-
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
@@ -12,7 +11,7 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotEmpty
-    @Column(name = "role_name" , unique = true )
+    @Column(name = "role_name", unique = true)
     private String roleName;
 
     public Long getId() {

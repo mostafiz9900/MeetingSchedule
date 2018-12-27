@@ -3,10 +3,10 @@ init:
 install:
 - ps: Install-Product node 8 x64
 branches:
-  only:
-  - master
-  - /^release\/.*$/
-  - /^(.*\/)?ci-.*$/
+    only:
+    - master
+    - /^release\/.*$/
+    - /^(.*\/)?ci-.*$/
 build_script:
 - ps: .\build.cmd
 clone_depth: 1

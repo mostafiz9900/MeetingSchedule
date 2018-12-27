@@ -24,7 +24,7 @@ public class Officer {
     @Column(name = "reg_date")
     private Date regDate;
     @ManyToOne
-            @JoinColumn(name = "desgi_id" , nullable = false)
+    @JoinColumn(name = "desgi_id", nullable = false)
     Designation designation;
 
 

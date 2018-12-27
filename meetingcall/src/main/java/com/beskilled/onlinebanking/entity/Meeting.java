@@ -17,7 +17,7 @@ public class Meeting {
     private String end;
 
     @ManyToOne
-    @JoinColumn(name = "officer_id" , nullable = false)
+    @JoinColumn(name = "officer_id", nullable = false)
     private Officer officer;
 
 }

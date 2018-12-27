@@ -9,10 +9,10 @@ import javax.persistence.*;
 public class Designation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-private int id;
+    private int id;
     @Column(name = "desig_name")
-private String designationName;
+    private String designationName;
     @ManyToOne
-    @JoinColumn(name = "officer_id" , nullable = false)
+    @JoinColumn(name = "officer_id", nullable = false)
     private Officer officer;
 }

@@ -22,7 +22,7 @@ public class User {
     @Column(name = "reg_date")
     private Date regDate;
     @ManyToOne
-    @JoinColumn(name = "role_id" , nullable = false)
+    @JoinColumn(name = "role_id", nullable = false)
     private Role role;
 
 
